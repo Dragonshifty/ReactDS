@@ -41,11 +41,10 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, title }) => {
     };
 
     return (
-        <div className="border border-primary p-3">
-            <h5>{title}</h5>
+        <div className="p-2 ">
+            <h5>{isPlaying ? "Pause" : "Play"}</h5>
             <audio ref={audioRef} src={src} onTimeUpdate={onTimeUpdate}></audio>
 
-            {/* Custom Controls */}
             <div className="d-flex align-items-center">
                 <button
                     className="btn btn-primary me-2"
@@ -53,13 +52,18 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, title }) => {
                 >
                     {isPlaying ? <FaPause /> : <FaPlay />}
                 </button>
-                <button className="btn btn-danger me-2" onClick={stopAudio}>
+                <button
+                    className="btn btn-danger me-2 mx-2"
+                    onClick={stopAudio}
+                >
                     <FaStop />
                 </button>
             </div>
 
-            {/* Progress Bar */}
-            <div className="progress mt-2" style={{ height: "10px" }}>
+            <div
+                className="progress mt-2"
+                style={{ height: "10px", width: "100px" }}
+            >
                 <div
                     className="progress-bar"
                     role="progressbar"

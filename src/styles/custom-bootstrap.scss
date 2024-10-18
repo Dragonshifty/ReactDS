@@ -1,4 +1,14 @@
 $primary: #acd69b;
 $body-bg: #000;
 
+$popover-bg: #000;
+
+$popover-max-width: 400px;
+
+$popover-header-bg: $primary;
+$popover-header-color: #000;
+$popover-border-color: $primary;
+
+$popover-body-color: $primary;
+
 @import "bootstrap/scss/bootstrap";

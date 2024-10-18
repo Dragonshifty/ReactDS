@@ -4,7 +4,7 @@ export const Navbar = () => {
             <div className="container">
                 <img
                     className="mx-2"
-                    src="../images/Asset1.png"
+                    src="../images/DSLogoSm.png"
                     alt="Logo"
                     width="35rem"
                     height="35rem"
