@@ -22,55 +22,57 @@ export const TrackElement: React.FC<TrackElementProps> = ({
             <h2 className="text-primary">{title}</h2>
             <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2 text-primary">
                 {/* First Column */}
-                <div className="col rounded border border-top-0 border-bottom-0 border-primary p-3">
-                    <div className="d-flex align-items-center">
-                        <div className="p-1" style={{ flex: "0 0 160px" }}>
+                <div className="col rounded border  border-primary p-3">
+                    <div className="d-flex align-items-center justify-content-center">
+                        <div className="p-2 ">
+                            <AudioPlayer src={femaleMusicPath} title="Play" />
+                            <div
+                                className="p-1 mt-2 d-flex justify-content-center align-items-center"
+                                style={{ flex: "1" }}
+                            >
+                                <TrackInfo
+                                    trackVarName={trackVarName}
+                                    gender="female"
+                                />
+                            </div>
+                        </div>
+
+                        <div className="p-1 border">
                             <img
-                                className="shadow border"
+                                className="img-fluid"
                                 src={femaleImagePath}
-                                height="160"
-                                width="160"
+                                height="300"
+                                width="300"
                                 alt=""
                             />
-                        </div>
-                        <div
-                            className="p-1 d-flex justify-content-center align-items-center"
-                            style={{ flex: "1" }}
-                        >
-                            <TrackInfo
-                                trackVarName={trackVarName}
-                                gender="female"
-                            />
-                        </div>
-                        <div className="p-2" style={{ flex: "0 0 160px" }}>
-                            <AudioPlayer src={femaleMusicPath} title="Play" />
                         </div>
                     </div>
                 </div>
 
                 {/* Second Column */}
-                <div className="col rounded border border-top-0 border-bottom-0 border-primary p-3">
-                    <div className="d-flex align-items-center">
-                        <div className="p-1" style={{ flex: "0 0 160px" }}>
+                <div className="col rounded border  border-primary p-3">
+                    <div className="d-flex align-items-center justify-content-center">
+                        <div className="p-1 border">
                             <img
-                                className="shadow border"
+                                className="img-fluid"
                                 src={maleImagePath}
-                                height="160"
-                                width="160"
+                                height="300"
+                                width="300"
                                 alt=""
                             />
                         </div>
-                        <div
-                            className="p-1 d-flex justify-content-center align-items-center"
-                            style={{ flex: "1" }}
-                        >
-                            <TrackInfo
-                                trackVarName={trackVarName}
-                                gender="male"
-                            />
-                        </div>
-                        <div className="p-2" style={{ flex: "0 0 160px" }}>
+
+                        <div className="p-2">
                             <AudioPlayer src={maleMusicPath} title="Play" />
+                            <div
+                                className="p-1 mt-2 d-flex justify-content-center align-items-center"
+                                style={{ flex: "1" }}
+                            >
+                                <TrackInfo
+                                    trackVarName={trackVarName}
+                                    gender="male"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>

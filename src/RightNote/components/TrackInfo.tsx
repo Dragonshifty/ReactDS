@@ -25,7 +25,7 @@ export const TrackInfo: React.FC<infoDataProps> = ({
     return (
         <div>
             <button
-                className="btn btn-primary btn-sm"
+                className="btn btn-primary btn-md"
                 id={`popover-${trackVarName}${gender}`}
                 data-bs-toggle="popover"
                 data-bs-title={infoData[trackVarName]?.title}

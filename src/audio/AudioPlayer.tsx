@@ -52,17 +52,14 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, title }) => {
                 >
                     {isPlaying ? <FaPause /> : <FaPlay />}
                 </button>
-                <button
-                    className="btn btn-danger me-2 mx-2"
-                    onClick={stopAudio}
-                >
+                <button className="btn btn-danger me-2" onClick={stopAudio}>
                     <FaStop />
                 </button>
             </div>
 
             <div
                 className="progress mt-2"
-                style={{ height: "10px", width: "100px" }}
+                style={{ height: "10px", width: "95px" }}
             >
                 <div
                     className="progress-bar"
