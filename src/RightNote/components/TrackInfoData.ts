@@ -28,7 +28,8 @@ export const infoData: Record<string, TrackInfo> = {
         title: "Fine",
         description:
             "Probably my favourite song, both in terms of narrative and that I thought it was time for the two vocalists to duet with each other. As with all the tracks, I'd rather not say exactly what the the narrative is, suffice to say some trivial things can mean a lot.",
-        authors: "",
+        authors:
+            "INEEDMUSIC.CO. Lyrics and vocal arrangement by Dragonshifty Studios.",
         worksType: "Derivative",
         finalChosen: true,
     },

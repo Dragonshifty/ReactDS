@@ -1,4 +1,5 @@
 $primary: #acd69b;
+$secondary: #5e2c81;
 $body-bg: #000;
 
 $popover-bg: #000;
@@ -10,5 +11,9 @@ $popover-header-color: #000;
 $popover-border-color: $primary;
 
 $popover-body-color: $primary;
+
+.popover {
+    font-family: "Special Elite", serif;
+}
 
 @import "bootstrap/scss/bootstrap";

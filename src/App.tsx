@@ -8,7 +8,7 @@ import { BodyLayout } from "./Body/BodyLayout";
 
 function App() {
     return (
-        <div>
+        <div className="element">
             <Navbar />
             <BodyLayout />
         </div>

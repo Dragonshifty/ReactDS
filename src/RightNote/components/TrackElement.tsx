@@ -1,4 +1,5 @@
 import { AudioPlayer } from "../../audio/AudioPlayer";
+import { ImageHandler } from "./ImageHandler";
 import { TrackInfo } from "./TrackInfo";
 
 interface TrackElementProps {
@@ -10,6 +11,15 @@ export const TrackElement: React.FC<TrackElementProps> = ({
     title,
     trackVarName,
 }) => {
+    const instrumentals: string[] = [
+        "rising",
+        "triggered",
+        "dreamWistfully",
+        "dreamWistfullyDiscovery",
+    ];
+
+    const instrumentalNameCheck = () => {};
+
     const sourcePathImage: string = "/images/";
     const sourcePathMusic: string = "/music/";
     const femaleMusicPath: string = `${sourcePathMusic}${trackVarName}Female.mp3`;
@@ -19,7 +29,7 @@ export const TrackElement: React.FC<TrackElementProps> = ({
 
     return (
         <div className="mb-4">
-            <h2 className="text-primary">{title}</h2>
+            <h2 className="text-primary anton-regular">{title}</h2>
             <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2 text-primary">
                 {/* First Column */}
                 <div className="col rounded border  border-primary p-3">
@@ -36,31 +46,14 @@ export const TrackElement: React.FC<TrackElementProps> = ({
                                 />
                             </div>
                         </div>
-
-                        <div className="p-1 border">
-                            <img
-                                className="img-fluid"
-                                src={femaleImagePath}
-                                height="300"
-                                width="300"
-                                alt=""
-                            />
-                        </div>
+                        <ImageHandler trackSourceName={femaleImagePath} />
                     </div>
                 </div>
 
                 {/* Second Column */}
                 <div className="col rounded border  border-primary p-3">
                     <div className="d-flex align-items-center justify-content-center">
-                        <div className="p-1 border">
-                            <img
-                                className="img-fluid"
-                                src={maleImagePath}
-                                height="300"
-                                width="300"
-                                alt=""
-                            />
-                        </div>
+                        <ImageHandler trackSourceName={maleImagePath} />
 
                         <div className="p-2">
                             <AudioPlayer src={maleMusicPath} title="Play" />

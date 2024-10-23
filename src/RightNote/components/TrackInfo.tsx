@@ -33,7 +33,7 @@ export const TrackInfo: React.FC<infoDataProps> = ({
                 Type: ${infoData[trackVarName]?.worksType}<br>
                 Authors: ${infoData[trackVarName]?.authors}<br>`}
             >
-                Track Info
+                Information
             </button>
         </div>
     );

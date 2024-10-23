@@ -1,7 +1,8 @@
-import { AudioPlayer } from "../audio/AudioPlayer";
 import React, { useEffect, useState } from "react";
 import { textScroll } from "../scripts/TextScroll";
 import { TrackElement } from "../RightNote/components/TrackElement";
+import { Preamble } from "../RightNote/components/Preamble";
+import { Pagination } from "../RightNote/components/Pagination";
 
 export const BodyLayout: React.FC = (props) => {
     // useEffect(() => {
@@ -10,22 +11,23 @@ export const BodyLayout: React.FC = (props) => {
     //     ) as NodeListOf<HTMLElement>;
     //     textScroll(paragraphs);
     // }, []);
-
-    const [pageOne, setPageOne] = useState(true);
-    const [pageTwo, setPageTwo] = useState(false);
-
-    function turnPage() {
-        setPageOne(!pageOne);
-        setPageTwo(!pageTwo);
-    }
+    const [currentPage, setCurrentPage] = useState("option1");
+    const handlePageChange = (page: string) => {
+        setCurrentPage(page);
+    };
 
     return (
         <div>
-            <div className="container mt-3">
-                <h3 className="mb-1 text-light">Tracks</h3>
-                <button onClick={turnPage}>Click</button>
-                <div className="p-5">
-                    {pageOne && (
+            <div className="container mt-3 ">
+                <Preamble />
+                <div className="d-flex justify-content-center mb-4">
+                    <Pagination
+                        page={currentPage}
+                        onPageChange={handlePageChange}
+                    />
+                </div>
+                <div className="p-1">
+                    {currentPage === "option1" && (
                         <>
                             <TrackElement
                                 title="Call To Me"
@@ -42,7 +44,7 @@ export const BodyLayout: React.FC = (props) => {
                             <TrackElement title="Fine" trackVarName="fine" />
                         </>
                     )}
-                    {pageTwo && (
+                    {currentPage === "option2" && (
                         <>
                             <TrackElement title="My One" trackVarName="myOne" />
                             <TrackElement title="Shine" trackVarName="shine" />
