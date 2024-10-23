@@ -3,6 +3,7 @@ import { textScroll } from "../scripts/TextScroll";
 import { TrackElement } from "../RightNote/components/TrackElement";
 import { Preamble } from "../RightNote/components/Preamble";
 import { Pagination } from "../RightNote/components/Pagination";
+import { InstrumentalTrackElement } from "../RightNote/components/InstrumentalTrackElement";
 
 export const BodyLayout: React.FC = (props) => {
     // useEffect(() => {
@@ -33,10 +34,7 @@ export const BodyLayout: React.FC = (props) => {
                                 title="Call To Me"
                                 trackVarName="callToMe"
                             />
-                            <TrackElement
-                                title="Clearly"
-                                trackVarName="clearly"
-                            />
+                            <TrackElement title="Fly On" trackVarName="flyOn" />
                             <TrackElement
                                 title="My Own Expectations"
                                 trackVarName="myOwnExpectations"
@@ -46,9 +44,28 @@ export const BodyLayout: React.FC = (props) => {
                     )}
                     {currentPage === "option2" && (
                         <>
+                            <TrackElement
+                                title="Clearly"
+                                trackVarName="clearly"
+                            />
                             <TrackElement title="My One" trackVarName="myOne" />
                             <TrackElement title="Shine" trackVarName="shine" />
-                            <TrackElement title="Fly On" trackVarName="flyOn" />
+                        </>
+                    )}
+                    {currentPage === "option3" && (
+                        <>
+                            <InstrumentalTrackElement
+                                titleLeft="Rising"
+                                trackVarNameLeft="rising"
+                                titleRight="Triggered"
+                                trackVarNameRight="triggered"
+                            />
+                            <InstrumentalTrackElement
+                                titleLeft="Dream Wistfully"
+                                trackVarNameLeft="dreamWistfully"
+                                titleRight="Dream Wistfully Discovery"
+                                trackVarNameRight="dreamWistfullyDiscovery"
+                            />
                         </>
                     )}
                 </div>

@@ -70,7 +70,7 @@ export const Pagination: React.FC<PaginationProps> = ({
                     onChange={handleOptionChange}
                     className="d-none"
                 />
-                Instrumentals
+                Instrumental Pieces
             </label>
         </div>
     );
