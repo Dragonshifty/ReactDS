@@ -60,16 +60,16 @@
 
 .cinzel-decorative-regular {
     font-family: "Cinzel Decorative", serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     font-size: 5em;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white; /* Text fill color */
-    -webkit-text-stroke: 2px black; /* Font stroke */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Text shadow */
+    color: black;
+    -webkit-text-stroke: 1px white;
+    text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.8);
     text-align: center;
 }
 
@@ -122,4 +122,18 @@
     font-size: 30px;
     color: #fff;
     cursor: pointer;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating-image {
+    animation: rotate 16s linear infinite; /* 10s for a slow rotation */
+    width: 400px; /* Adjust the size as needed */
 }

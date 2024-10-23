@@ -11,7 +11,7 @@ function App() {
     return (
         <div className="element">
             <Navbar />
-            <BodyLayout />
+            {/* <BodyLayout /> */}
             <DiffrentiaBody />
         </div>
     );
