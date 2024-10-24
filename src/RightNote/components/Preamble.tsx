@@ -1,8 +1,8 @@
 export const Preamble = () => {
     return (
         <>
-            <div className="text-center">
-                <h1 className="text-primary anton-regular-bg">
+            <div className="text-center pt-3">
+                <h1 className="text-primary anton-regular-bg ">
                     Hitting the Right Note
                 </h1>
             </div>

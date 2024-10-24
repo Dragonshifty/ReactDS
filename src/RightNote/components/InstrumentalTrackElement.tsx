@@ -28,7 +28,7 @@ export const InstrumentalTrackElement: React.FC<TrackElementProps> = ({
             {/* <h2 className="text-primary anton-regular">{titleLeft}</h2> */}
             <div className="row row-cols-1 row-cols-md-1 row-cols-lg-2 text-primary">
                 {/* First Column */}
-                <div className="col rounded border  border-primary p-3">
+                <div className="col rounded border  border-secondary p-3">
                     <h2 className="text-primary anton-regular">{titleLeft}</h2>
                     <div className="d-flex align-items-center justify-content-center">
                         <div className="p-2 ">
@@ -49,7 +49,7 @@ export const InstrumentalTrackElement: React.FC<TrackElementProps> = ({
 
                 {/* Second Column */}
 
-                <div className="col rounded border  border-primary p-3">
+                <div className="col rounded border  border-secondary p-3">
                     <h2 className="text-primary anton-regular text-end">
                         {titleRight}
                     </h2>

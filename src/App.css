@@ -50,6 +50,8 @@
     font-weight: 400;
     font-style: normal;
     font-size: 7em;
+    text-shadow: 0 0 10px #b2ebf2;
+    /* -webkit-text-stroke: 1px #5e2c81; */
 }
 
 .anton-regular {
@@ -62,7 +64,13 @@
     font-family: "Cinzel Decorative", serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 5em;
+}
+
+.cinzel-decorative-header {
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 4.2rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -135,5 +143,45 @@
 
 .rotating-image {
     animation: rotate 16s linear infinite; /* 10s for a slow rotation */
-    width: 400px; /* Adjust the size as needed */
+    width: 350px; /* Adjust the size as needed */
+}
+
+.text-right {
+    text-align: right;
+}
+
+.iframe-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.border-3 {
+    border-width: 3px !important;
+}
+
+.glow {
+    color: #acd69b; /* Base color of the text */
+    text-align: center;
+    animation: glow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #e0f7fa, 0 0 10px #80deea, 0 0 15px #4dd0e1;
+    }
+    100% {
+        text-shadow: 0 0 10px #b2ebf2, 0 0 15px #80cbc4, 0 0 20px #4db6ac;
+    }
 }

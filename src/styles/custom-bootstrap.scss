@@ -4,6 +4,8 @@ $body-bg: #000;
 
 $popover-bg: #000;
 
+$diffgreen: #167758;
+
 $popover-max-width: 400px;
 
 $popover-header-bg: $primary;
@@ -11,9 +13,5 @@ $popover-header-color: #000;
 $popover-border-color: $primary;
 
 $popover-body-color: $primary;
-
-.popover {
-    font-family: "Special Elite", serif;
-}
 
 @import "bootstrap/scss/bootstrap";

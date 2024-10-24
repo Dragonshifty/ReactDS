@@ -18,8 +18,8 @@ export const BodyLayout: React.FC = (props) => {
     };
 
     return (
-        <div>
-            <div className="container mt-3 ">
+        <div className=" ">
+            <div className="container ">
                 <Preamble />
                 <div className="d-flex justify-content-center mb-4">
                     <Pagination
